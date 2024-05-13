@@ -1,0 +1,37 @@
+.banner {
+  padding: $desktop-padding;
+  height: 20rem;
+  background-color: #deeced;
+  width: 100%;
+}
+
+.bannerTransparent {
+  padding: $desktop-padding;
+  height: 20rem;
+  background-color: transparent;
+  width: 100%;
+}
+
+@media (max-width: 639px) {
+  .banner {
+    padding: $mobile-padding;
+    height: 18.5rem;
+    background-color: #deeced;
+    width: 100%;
+
+    h3 {
+      text-align: center;
+    }
+  }
+
+  .bannerTransparent {
+    padding: $mobile-padding;
+    min-height: 18.5rem;
+    background-color: transparent;
+    width: 100%;
+
+    h3 {
+      text-align: center;
+    }
+  }
+}

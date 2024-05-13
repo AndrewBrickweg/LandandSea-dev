@@ -1,0 +1,130 @@
+.card {
+  margin: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  height: 21.25rem;
+  width: 16.875rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 24px -5px rgba(14, 31, 53, 0.25);
+  transition: all 200ms ease-in-out;
+
+  &:hover {
+    transform: scale(1.01);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px -2px rgba(14, 31, 53, 0.1);
+    cursor: pointer;
+  }
+
+  .image {
+    position: relative;
+    height: 55%;
+    pointer-events: none;
+
+    span {
+      border-top-left-radius: 1rem;
+      border-top-right-radius: 1rem;
+    }
+
+    .badge {
+      position: absolute;
+      top: 0;
+      right: 0;
+      border: 1px solid #fff;
+      color: #fff;
+      font-size: 10px;
+      z-index: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 0.5rem;
+      margin-right: 0.5rem;
+      padding: 0.5rem;
+      border-radius: 1rem;
+    }
+  }
+
+  .desc {
+    height: 45%;
+  }
+
+  .info {
+    padding: 0.5rem;
+    .price {
+      margin-top: 1rem;
+      font-family: $font-style-primary;
+      font-size: $font-sm;
+      font-weight: bold;
+    }
+    .address {
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      font-family: $font-style-secondary;
+      font-size: $font-xs;
+      color: $color-grey;
+    }
+  }
+
+  .divider {
+    width: 15.25rem;
+    border: solid 1px $color-lightgrey;
+    margin: auto;
+  }
+
+  .icons {
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    color: $color-grey;
+
+    .icon {
+      text-align: center;
+
+      p {
+        font-size: $font-xs;
+        font-weight: 700;
+        color: $color-black;
+
+        &:last-child {
+          color: $color-grey;
+          font-size: $font-mini;
+        }
+      }
+    }
+  }
+}
+
+.largeCard {
+  @extend .card;
+}
+
+@media (max-width: 639px) {
+  .largeCard {
+    width: 100%;
+    height: 29rem;
+    margin: 1.5rem 0 0.75rem 0;
+
+    .info {
+      padding: 1rem;
+      .price {
+        font-size: $font-med;
+      }
+      .address {
+        font-size: $font-sm;
+      }
+    }
+
+    .icons {
+      padding: 2rem 2rem;
+      .icon {
+        p {
+          font-size: $font-sm;
+
+          &:last-child {
+            font-size: $font-xs;
+          }
+        }
+      }
+    }
+  }
+}

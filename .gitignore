@@ -1,0 +1,37 @@
+.vscode
+
+/express
+
+/sanity/node_modules
+/next/node_modules
+/next/.pnp
+/next/.pnp.js
+
+# testing
+/next/coverage
+
+# next.js
+/next/.next/
+/next/out/
+
+# production
+/next/build
+
+# misc
+/next/.DS_Store
+/next/*.pem
+
+# debug
+/next/npm-debug.log*
+/next/yarn-debug.log*
+/next/yarn-error.log*
+
+# local env files
+/next/.env
+/next/.env.local
+/next/.env.development.local
+/next/.env.test.local
+/next/.env.production.local
+
+# vercel
+/next/.vercel

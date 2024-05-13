@@ -1,0 +1,70 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: $desktop-padding;
+  max-width: $wide-screen;
+  margin: auto;
+
+  .text {
+    font-weight: bold;
+    h3 {
+      font-size: $font-xxl;
+      letter-spacing: -0.8px;
+    }
+
+    p {
+      margin-top: 0.5rem;
+      font-size: $font-xl;
+      letter-spacing: -0.64px;
+    }
+    .subHead {
+      margin-top: 2rem;
+      max-width: 42rem;
+      font-family: $font-style-secondary;
+      font-size: $font-lg;
+      font-weight: 400;
+    }
+
+    .button {
+      margin-top: 2.5rem;
+      color: #fff;
+      background-color: $color-blue;
+      height: 3.5rem;
+      width: 13.125rem;
+      font-size: $font-sm;
+      font-weight: bold;
+      letter-spacing: -0.34px;
+      text-transform: capitalize;
+
+      &:hover {
+        background-color: darken($color-blue, 10%);
+      }
+    }
+  }
+
+  .img {
+    position: relative;
+    width: 100%;
+    max-width: 32.5rem;
+    height: 23rem;
+    margin-left: 1rem;
+    @include breakpoint-down(small) {
+      display: none !important;
+    }
+    span {
+      border-radius: 10px;
+    }
+  }
+}
+
+@media (max-width: 639px) {
+  .container {
+    flex-direction: column;
+    padding: 1.5rem;
+  }
+
+  .button {
+    width: 100% !important;
+  }
+}

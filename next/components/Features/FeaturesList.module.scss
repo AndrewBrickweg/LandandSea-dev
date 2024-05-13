@@ -1,0 +1,25 @@
+.icon {
+  color: #5a606c;
+  padding: 1.5rem 0rem;
+  font-size: 3rem;
+}
+.container {
+  padding: 1.875rem 0rem;
+}
+.iconContainer {
+  width: 10rem;
+  text-align: center;
+}
+.title {
+  font-size: $font-med;
+  font-weight: bold;
+}
+
+@media (max-width: 639px) {
+  .icon {
+    font-size: 2rem;
+  }
+  .title {
+    font-size: $font-sm;
+  }
+}

@@ -1,0 +1,47 @@
+.container {
+  padding: $desktop-padding;
+}
+
+.header {
+  padding-left: 1.75rem;
+  padding-bottom: 1.313rem;
+  font-size: $font-lg;
+  font-weight: bold;
+}
+.bannerLabel {
+  padding-top: 0.625rem;
+}
+
+.scheduleButton {
+  padding: 10px;
+}
+
+.address {
+  font-family: $font-style-secondary;
+  font-size: $font-xl;
+}
+
+.price {
+  font-size: $font-lg;
+  font-weight: bold;
+}
+
+.description {
+  font-family: $font-style-secondary;
+  font-size: $font-lg;
+}
+
+@media (max-width: 639px) {
+  .container {
+    padding: $mobile-padding;
+  }
+  .address {
+    font-size: $font-lg;
+  }
+  .price {
+    font-size: $font-med;
+  }
+  .description {
+    font-size: $font-med;
+  }
+}

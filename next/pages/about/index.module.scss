@@ -1,0 +1,169 @@
+.container {
+  max-width: $wide-screen;
+  margin: auto;
+  padding: $desktop-padding;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .intro {
+    max-width: 1250px;
+    font-family: $font-style-secondary;
+    font-size: $font-xl;
+    letter-spacing: -0.23px;
+  }
+}
+
+.header {
+  margin-top: 3.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  h1 {
+    width: 100%;
+    font-size: $font-xxl;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  div {
+    width: 100%;
+    border-bottom: 2px solid $color-teal;
+  }
+}
+
+.mom {
+  margin-top: 4.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 3.75rem;
+
+  .image {
+    height: 520px;
+    width: 100%;
+    position: relative;
+    img {
+      border-radius: 14px;
+    }
+  }
+  h2 {
+    font-size: $font-xl;
+  }
+  p {
+    font-family: $font-style-secondary;
+    margin-top: 1.5rem;
+    font-size: $font-med;
+  }
+
+  .contact {
+    margin-top: 1.5rem;
+
+    a {
+      font-family: $font-style-secondary;
+      font-size: $font-lg;
+      font-weight: 500;
+
+      &:not(:last-child) {
+        margin-right: 2rem;
+      }
+    }
+    span {
+      margin-right: 1rem;
+      color: $color-teal;
+    }
+  }
+}
+
+.staffContainer {
+  max-width: $wide-screen;
+  margin-top: 8rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+  .staffCard {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    .staffImage {
+      position: relative;
+      height: 15.625rem;
+      width: 15.625rem;
+
+      img {
+        border-radius: 0.75rem;
+      }
+    }
+
+    h3 {
+      margin-top: 2rem;
+      font-size: $font-xl;
+      font-weight: bold;
+    }
+
+    p {
+      font-family: $font-style-secondary;
+      font-size: $font-xl;
+    }
+
+    .staffContact {
+      font-size: $font-med;
+      font-weight: 500;
+      color: #222;
+    }
+  }
+}
+
+@media (max-width: 1023px) {
+  .mom {
+    display: flex;
+    flex-direction: column;
+
+    .contact {
+      text-align: center;
+    }
+  }
+
+  .staffContainer {
+    flex-direction: column;
+    text-align: center;
+
+    .staffCard {
+      &:not(:last-child) {
+        margin-bottom: 3rem;
+      }
+      .staffImage {
+        height: 350px !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 639px) {
+  .container {
+    padding: 1.5rem;
+
+    .intro {
+      font-size: $font-sm_med;
+      text-align: center;
+    }
+  }
+
+  .mom {
+    .image {
+      height: 450px;
+    }
+    p {
+      font-size: $font-sm_med;
+    }
+  }
+}

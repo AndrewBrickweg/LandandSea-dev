@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600&family=Spartan:wght@100;400;600;700;800;900&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html,
+body,
+div,
+hr,
+span,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+a,
+abbr,
+address,
+cite,
+img,
+small,
+strong,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+footer,
+header,
+menu,
+nav,
+section,
+video {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  color: #000;
+  background-color: #fff;
+  font-family: $font-style-primary;
+  font-size: $font-med; //20px
+  font-weight: 400;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.4px;
+
+  &.no-scroll {
+    overflow: hidden !important;
+  }
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+input[type="text"] {
+  font-family: $font-style-secondary;
+}
+// pushes footer to bottom of vp if content doesn't expand past vp
+// subtracts vp-height from height of footer
+.content {
+  min-height: calc(100vh - $footer-height);
+}
+
+.snap-inline {
+  scroll-snap-type: inline mandatory;
+}
+
+.snap-inline > * {
+  scroll-snap-align: start;
+}

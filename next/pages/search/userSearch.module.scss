@@ -1,0 +1,90 @@
+.filterContainer {
+  margin-top: 3rem;
+  padding: 0 $desktop-padding;
+}
+.container {
+  padding: $desktop-padding;
+  margin: auto;
+  max-width: $wide-screen;
+
+  .topControls {
+    font-family: $font-style-secondary;
+    font-size: $font-med;
+    color: $color-grey;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 7.5rem;
+    z-index: 10;
+    background-color: #fff;
+    padding: 1rem 0;
+    border-bottom: 2px solid $color-blue;
+
+    .viewSort {
+      span {
+        margin-left: 0.5rem;
+      }
+    }
+  }
+
+  .bottomControls {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .results {
+    font-family: $font-style-secondary;
+    font-size: $font-med;
+    color: $color-grey;
+    text-align: center;
+
+    span {
+      margin-left: 1rem;
+      color: $color-teal;
+      border-bottom: 1px solid $color-teal;
+    }
+  }
+
+  .cardItem {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .noResults {
+    text-align: center;
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 639px) {
+  .filterContainer {
+    margin-top: 2.25rem;
+    padding: 0 $mobile-padding;
+  }
+  .container {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .cardItem {
+      display: block;
+    }
+    .topControls {
+      width: 100vw;
+      flex-direction: column;
+      top: 5.5rem;
+
+      .results {
+        font-size: $font-sm;
+        margin: 0.5rem 0;
+      }
+    }
+    .bottomControls {
+      display: none;
+    }
+  }
+}

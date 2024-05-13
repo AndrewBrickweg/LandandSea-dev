@@ -1,0 +1,44 @@
+.container {
+  padding: $desktop-padding;
+  text-align: center;
+  max-width: $wide-screen;
+  margin: auto;
+  h4 {
+    font-size: $font-lg;
+    font-weight: bold;
+  }
+
+  .stats {
+    margin: 2.5rem auto 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    img {
+      border-radius: 50%;
+    }
+
+    p {
+      margin-top: 1rem;
+      font-size: $font-lg;
+      span {
+        font-size: $font-xxl;
+        font-weight: bold;
+        letter-spacing: -0.8px;
+        color: $color-teal;
+      }
+    }
+  }
+}
+
+@media (max-width: 639px) {
+  .container {
+    padding: $mobile-padding;
+  }
+  .stats {
+    margin-top: 1.5rem !important;
+    flex-direction: column;
+    .item {
+      margin-top: 2rem;
+    }
+  }
+}

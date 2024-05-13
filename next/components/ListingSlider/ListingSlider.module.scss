@@ -1,0 +1,57 @@
+.container {
+  padding-top: $desktop-padding;
+  padding-left: $desktop-padding;
+}
+
+.heading {
+  font-family: $font-style-secondary;
+  font-size: $font-med;
+}
+
+.headingTwo {
+  font-family: $font-style-primary;
+  font-weight: 700;
+  font-size: $font-lg;
+
+  span {
+    color: $color-teal;
+    font-family: $font-style-secondary;
+    font-weight: 600;
+    font-size: $font-med;
+    margin-left: 0.5rem;
+  }
+}
+
+.slider {
+  margin-left: -1.5rem; //adjusts for container padding so that card shadow can fully display
+  display: grid;
+  grid-auto-flow: column;
+  width: max-content;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+}
+.enableScroll {
+  display: flex;
+  width: auto;
+}
+
+.animation {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 639px) {
+  .container {
+    padding-top: 2.5rem;
+    padding-left: 1.5rem;
+
+    .headingTwo {
+      max-width: 15rem;
+    }
+  }
+
+  .slider {
+    margin-left: -1.5rem;
+  }
+}

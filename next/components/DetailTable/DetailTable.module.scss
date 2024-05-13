@@ -1,0 +1,42 @@
+.container {
+  .detailTableWrapper {
+    width: auto;
+  }
+  .header {
+    padding-left: 1.75rem;
+    padding-top: 1.313rem;
+    font-size: $font-lg;
+    font-weight: bold;
+  }
+  .detailTable {
+    width: 100%;
+    padding: 0.625rem;
+    word-wrap: normal;
+    table-layout: fixed;
+  }
+
+  .tableRow {
+    font-family: $font-style-secondary;
+    font-size: $font-lg;
+  }
+
+  .tableRow:nth-child(odd) {
+    background-color: $color-table-alt-row;
+    border: 0px;
+  }
+  .tableRowHeader {
+    font-weight: bold;
+    padding: 0.5rem;
+  }
+  .tableRowValue {
+    padding: 0.5rem;
+  }
+}
+
+@media (max-width: 639px) {
+  .container {
+    .tableRow {
+      font-size: $font-med;
+    }
+  }
+}

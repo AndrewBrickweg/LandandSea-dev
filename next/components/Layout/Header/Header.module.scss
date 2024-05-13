@@ -1,0 +1,125 @@
+.nav {
+  height: 6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .logo {
+    position: relative;
+    height: 6rem;
+    width: 7.5rem;
+    margin-left: 3rem;
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    margin-right: 3rem;
+
+    @include breakpoint-down(medium) {
+      display: none !important;
+    }
+
+    li {
+      font-weight: 600;
+      text-transform: uppercase;
+
+      a {
+        padding: 20px;
+      }
+
+      &:not(:last-child) {
+        margin-right: 2rem;
+      }
+
+      &:hover {
+        color: $color-teal;
+      }
+    }
+  }
+}
+
+.burger {
+  background-color: transparent;
+  border: none;
+  margin-right: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 44px;
+  height: 44px;
+
+  @include breakpoint-up(large) {
+    display: none !important;
+  }
+
+  > div {
+    border: 1.5px solid #000;
+    width: 32px;
+    background-color: #000;
+    transition: all 200ms ease-in-out;
+    transform-origin: 2px 2px;
+
+    &:not(:last-child) {
+      margin-bottom: 7px;
+    }
+  }
+  &.open {
+    > div:first-child {
+      transform: rotate(45deg);
+    }
+    > div:nth-child(2) {
+      opacity: 0;
+    }
+    > div:last-child {
+      transform: rotate(-45deg);
+    }
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.mobileMenu {
+  position: absolute;
+  min-width: 100%;
+  height: calc(100vh - 5rem); //minus mobile nav height
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  background-color: rgba($color: #fff, $alpha: 0.5);
+  backdrop-filter: blur(7px);
+  padding: 1.625rem;
+  border-radius: 3px;
+  z-index: 100;
+
+  a {
+    display: block;
+    width: 100%;
+    padding: 1.5rem;
+    text-align: center;
+    transition: all 200ms ease-in-out;
+
+    &:hover,
+    :active {
+      color: $color-teal;
+    }
+  }
+}
+
+.active {
+  border-bottom: 3px solid $color-teal;
+}
+
+@media (max-width: 1023px) {
+  .nav {
+    height: 5rem;
+  }
+
+  .logo {
+    width: 6rem !important;
+    margin-left: 1.5rem !important;
+  }
+}

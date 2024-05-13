@@ -1,0 +1,27 @@
+.container {
+  margin-top: 3.25rem;
+  .heading {
+    padding: 0 $desktop-padding;
+    font-family: $font-style-secondary;
+    font-size: $font-med;
+  }
+  .tabs {
+    padding: 0 $desktop-padding;
+  }
+  .panel {
+    padding-left: $desktop-padding;
+  }
+}
+@media (max-width: 639px) {
+  .container {
+    .heading {
+      padding: 0 $mobile-padding;
+    }
+    .tabs {
+      padding: 0;
+    }
+    .panel {
+      padding-left: $mobile-padding;
+    }
+  }
+}

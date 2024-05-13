@@ -1,0 +1,28 @@
+.Button {
+  margin-left: 1.5rem;
+  background-color: $color-blue;
+  height: 3rem;
+  max-width: 15rem;
+  width: fit-content;
+  font-size: $font-sm;
+  font-weight: bold;
+  letter-spacing: -0.34px;
+  text-transform: none;
+
+  &:hover {
+    background-color: darken($color-blue, 10%);
+  }
+}
+
+.ButtonOutlined {
+  margin-left: 1.5rem;
+  background-color: transparent;
+  height: 3rem;
+  width: 10rem;
+  font-size: $font-sm;
+  font-weight: bold;
+  letter-spacing: -0.34px;
+  text-transform: capitalize;
+  border-color: $color-blue;
+  color: $color-blue;
+}
